@@ -1,4 +1,4 @@
-FROM alpine:3.11.9
+FROM alpine:3.11.8
 
 RUN apk add --update-cache openssh borgbackup
 
