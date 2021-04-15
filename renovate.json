@@ -1,7 +1,12 @@
 {
   "extends": [
     "config:base",
-    "default:automergeDigest"
+    "default:automergeDigest",
+    "docker:enableMajor",
+    "default:automergeBranchPush"
   ],
+  "digest": {
+    "automerge": true
+  },
   "automerge": true
 }
