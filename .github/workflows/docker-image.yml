@@ -8,7 +8,7 @@ on:
     branches: [ main, master ]
 
 env:
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: borgbackup
   
 jobs:
   docker:
@@ -30,7 +30,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           # list of Docker images to use as base name for tags
-          images: ${env.IMAGE_NAME//docker-/}
+          images: ${{ env.IMAGE_NAME }}
           # generate Docker tags based on the following events/attributes
           tags: |
             type=ref,event=pr
