@@ -8,7 +8,7 @@ on:
     branches: [ main, master ]
 
 env:
-  IMAGE_NAME: borgbackup
+  IMAGE_NAME: mnestor/borgbackup
   
 jobs:
   docker:
