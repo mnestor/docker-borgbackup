@@ -30,7 +30,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           # list of Docker images to use as base name for tags
-          images: ${{ env.IMAGE_NAME }}
+          images: ${env.IMAGE_NAME//docker-/}
           # generate Docker tags based on the following events/attributes
           tags: |
             type=ref,event=pr
